@@ -5,27 +5,37 @@ import { UiIconSymbol } from '@/components/ui/ui-icon-symbol'
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false }}>
-      {/* The index redirects to the account screen */}
-      <Tabs.Screen name="index" options={{ tabBarItemStyle: { display: 'none' } }} />
+      {/* The index redirects to the home screen */}
       <Tabs.Screen
-        name="account"
+        name="index"
+        options={{ tabBarItemStyle: { display: 'none' }, href: null }}
+      />
+      <Tabs.Screen
+        name="home"
         options={{
-          title: 'Account',
-          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="wallet.pass.fill" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="otc"
         options={{
-          title: 'Settings',
-          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="gearshape.fill" color={color} />,
+          title: 'OTC',
+          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="chart.line.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="demo"
+        name="activity"
         options={{
-          title: 'Demo',
-          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="ladybug.fill" color={color} />,
+          title: 'Activity',
+          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="clock.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <UiIconSymbol size={28} name="person.fill" color={color} />,
         }}
       />
     </Tabs>

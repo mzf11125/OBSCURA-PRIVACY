@@ -13,9 +13,64 @@ export type UiIconSymbolName = keyof typeof MAPPING
  * - see SF Symbols in the [SF Symbols](https://developer.apple.com/sf-symbols/) app.
  */
 const MAPPING = {
+  // Existing icons
   'gearshape.fill': 'settings',
   'wallet.pass.fill': 'wallet',
   'ladybug.fill': 'bug-report',
+
+  // Tab icons - Home
+  'house.fill': 'home',
+  'house': 'home',
+
+  // Tab icons - OTC
+  'chart.line.fill': 'show-chart',
+  'chart.line.uptrend.xyaxis': 'trending-up',
+  'arrow.swap': 'swap-horiz',
+
+  // Tab icons - Activity
+  'clock.fill': 'history',
+  'clock': 'history',
+  'list.bullet': 'list',
+  'clock.arrow.circlepath': 'update',
+
+  // Tab icons - Profile
+  'person.fill': 'person',
+  'person': 'person',
+  'person.crop.circle': 'account-circle',
+
+  // Action icons
+  'arrow.right': 'arrow-forward',
+  'arrow.left': 'arrow-back',
+  'chevron.right': 'chevron-right',
+  'chevron.down': 'expand-more',
+  'plus.circle.fill': 'add-circle',
+  'checkmark.circle.fill': 'check-circle',
+  'xmark.circle.fill': 'cancel',
+  'exclamationmark.triangle.fill': 'warning',
+
+  // Privacy icons
+  'eye.fill': 'visibility',
+  'eye.slash.fill': 'visibility-off',
+  'lock.fill': 'lock',
+  'lock.open.fill': 'lock-open',
+  'shield.fill': 'verified-user',
+  'shield.lefthalf.filled': 'security',
+
+  // OTC icons
+  'arrow.up.right': 'trending-up',
+  'arrow.down.right': 'trending-down',
+  'arrow.left.arrow.right': 'swap-horiz',
+  'repeat': 'repeat',
+
+  // Wallet icons
+  'creditcard.fill': 'credit-card',
+  'banknote.fill': 'attach-money',
+
+  // Status icons
+  'checkmark': 'check',
+  'xmark': 'close',
+  'ellipsis': 'more-horiz',
+  'info.circle.fill': 'info',
 } as UiIconMapping
 
 /**

@@ -4,6 +4,8 @@ import { PropsWithChildren } from 'react'
 import { AuthProvider } from '@/components/auth/auth-provider'
 import { ClusterProvider, useCluster } from '@/components/cluster/cluster-provider'
 import { AppTheme } from '@/components/app-theme'
+import { PrivacyProvider } from '@/contexts/privacy-context'
+import { OtcProvider } from '@/contexts/otc-context'
 
 const queryClient = new QueryClient()
 export function AppProviders({ children }: PropsWithChildren) {
@@ -12,7 +14,11 @@ export function AppProviders({ children }: PropsWithChildren) {
       <QueryClientProvider client={queryClient}>
         <ClusterProvider>
           <SolanaProvider>
-            <AuthProvider>{children}</AuthProvider>
+            <AuthProvider>
+              <PrivacyProvider>
+                <OtcProvider>{children}</OtcProvider>
+              </PrivacyProvider>
+            </AuthProvider>
           </SolanaProvider>
         </ClusterProvider>
       </QueryClientProvider>
